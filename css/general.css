@@ -27,7 +27,10 @@ Default : -0.5
 
 - Tints : #fdf2e9
 #fae5d3
-- Shades : #cf711f
+#eb984e
+- Shades : 
+#cf711f
+#45260a
 - Accents
 - Greys
 #555
@@ -35,6 +38,8 @@ Default : -0.5
 #6f6f6f
 
 --- 05 Shadows ---
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 06 Border radius ---
 
@@ -104,15 +109,19 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  background-color: #e67e22;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* Put transition in a original state */
   transition: all 0.3s;
@@ -141,6 +150,18 @@ body {
 
   /* Border inside the button */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -201,6 +222,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
@@ -230,4 +255,9 @@ strong {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
